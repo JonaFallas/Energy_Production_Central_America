@@ -1,8 +1,7 @@
 Objectives:
  
-	• Create a data base on PostgreSQL.
-	• Create two relational tables and import the data. 
-	• Determine the energy production in Central America by source from 2000 to 2020.
+	• Using PostgreSQL create two relational tables and import the data. 
+	• Explore the energy production in Central America by source from 2000 to 2020.
 	• Analyze the trend in energy production in Central America.
 	• Examine the distribution of renewable and non-renewable energy production in Central America from 2000 to 2020.
 	• Generate insightful visualizations in Power BI using the retrieved data to effectively communicate trends and patterns in Central American energy production from 2000 to 2020.
