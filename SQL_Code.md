@@ -1,7 +1,6 @@
--- SQL CODE
-
-
 ~~~ SQL
+
+-- SQL CODE
 
 -- Creating the tables and adding data 
 	
@@ -10,14 +9,13 @@ CREATE TABLE country_list (
        country  varchar);
 
 
-~~~ SQL	   
+  
 --Importing data from csv
 COPY public.country_list
 FROM 'C:\Users\Usuario\Desktop\Country_List.csv'
 WITH CSV HEADER
 
 
-~~~ SQL
 ---Creating the second table
 CREATE TABLE energy_production (
   country_code varchar,
@@ -40,7 +38,7 @@ CREATE TABLE energy_production (
   oil_production numeric,
   oil_prod_per_capita numeric );
 
-~~~ SQL
+
 --importing data from csv
 COPY public.energy_production
 FROM 'C:\Users\Usuario\Desktop\Energy_Production.csv'
@@ -48,19 +46,18 @@ WITH CSV HEADER
 
 
 
-~~~ SQL
+
 -- Inspecting the data
 
 Select *
 From public.country_list;
 
-~~~ SQL
 Select *
 From public.energy_production;
 
 
 
-~~~ SQL
+
 -- Checking for unique values
 
 SELECT Count(distinct country_code) 
@@ -68,35 +65,35 @@ FROM public.energy_production;
 
 
 
-~~~ SQL
+
 SELECT Count(distinct country) 
 FROM public.country_list;
 -- 223 country_codes and country names in the energy_production table
 
 
 
-~~~ SQL
+
 SELECT Count(distinct country_code) 
 FROM public.country_list;
 -- 223 country_code in coutry_list table
 
 
-~~~ SQL
+
 --Finding the min and max years
 
-~~~ SQL
+
 SELECT min(year)
 FROM public.energy_production
 --1900  is the min year 
 
-~~~ SQL
+
 SELECT max(year)
 FROM public.energy_production
 --2020  is the max year 
 
 
 
-~~~ SQL
+
 
 --Analysis
 -- 1. How much energy was produced in Central America by energy type, from year 2000 to 2020?
@@ -180,7 +177,7 @@ GROUP BY
 	list.country_code;
 
 
-~~~ SQL
+
 -- 2. What is the energy production trend in Central America since 2000 to 2020 by source?
 SELECT 
 	country,
@@ -206,7 +203,7 @@ AND
 
 
 
-~~~ SQL
+
 --3. Finding the among of renewable and non renewable energy that is produced in Central America, from 2000 to 2020.
 SELECT
 	country,
@@ -227,7 +224,7 @@ GROUP BY country;
 
 
 
-~~~ SQL
+
 --4. What is the percentage of energy produced form renewable sources and fossil sources in countries of Central America (2000-2020)
 SELECT 
 	country, 
