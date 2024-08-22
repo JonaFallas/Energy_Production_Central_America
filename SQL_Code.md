@@ -64,13 +64,9 @@ SELECT Count(distinct country_code)
 FROM public.energy_production;
 
 
-
-
 SELECT Count(distinct country) 
 FROM public.country_list;
 -- 223 country_codes and country names in the energy_production table
-
-
 
 
 SELECT Count(distinct country_code) 
@@ -79,8 +75,8 @@ FROM public.country_list;
 
 
 
---Finding the min and max years
 
+--Finding the min and max years
 
 SELECT min(year)
 FROM public.energy_production
@@ -108,10 +104,10 @@ WITH cte_total_energy AS(
 	 hydro_electricity+
 	 geothermal_energy+ 
 	 other_renewable_exc_biofuel_electricity+
-     oil_electricity+
-     gas_electricity+
-     nuclear_electricity+
-     coal_electricity) 
+    	 oil_electricity+
+    	 gas_electricity+
+    	 nuclear_electricity+
+     	 coal_electricity) 
 		AS total_sum
 	 FROM 
 	  	public.energy_production
